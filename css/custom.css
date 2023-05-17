@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+img{
+  max-width: 100%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+.logo img {
+    height: 50px;
+  }
+  
+  .menu-bar {
+    display: none;
+    cursor: pointer;
+  }
+  .menu-bar {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .menu-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-links ul li {
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  .menu-links ul li a {
+    color: #262626;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  /* Style the dropdown menu */
+.menu-links ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 125px;
+}
+
+.menu-links ul li:hover > ul {
+  display: block;
+}
+
+.menu-links ul ul li {
+  margin: 5px 0;
+}
+
+.menu-links ul ul li a {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+}
+/* Style the sub dropdown menu */
+.menu-links ul ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-links ul ul li:hover > ul {
+  display: block;
+}
+
+.menu-links ul ul ul li {
+  margin: 5px 0;
+}
+
+.menu-links ul ul ul li a {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+  /* Media queries for responsive layout */
+  @media (max-width: 768px) {
+    .menu-bar {
+      display: block;
+    }
+    .menu-links {
+      display: none;
+      position: absolute;
+      top: 65px;
+      left: 0;
+      padding: 10px;
+      width: 100%;
+    }
+    .menu-links ul {
+      flex-direction: column;
+      width: 100%;
+    }
+    .menu-links ul li {
+      margin: 10px 0;
+    }
+    .menu-links ul li a {
+      font-size: 20px;
+    }
+    .menu-links.show {
+      display: block;
+    }
+    /* Style the dropdown menu */
+    .menu-links ul ul {
+        display: none;
+      }
+      
+      .menu-links ul li:hover > ul {
+        display: block;
+        position: relative;
+        background-color: #f5f5f5;
+        padding: 10px;
+        margin-left: 10px;
+        box-shadow: none;
+      }
+      .menu-links ul ul li a {
+        font-size: 20px;
+      }
+      .menu-links ul ul ul {
+        display: none;
+      }
+      .menu-links ul ul li:hover > ul {
+        display: block;
+        position: relative;
+        left: 0;
+        background-color: #f5f5f5;
+        padding: 10px;
+        margin-left: 10px;
+      }
+      .menu-links ul ul ul li a {
+        font-size: 20px;
+      }
+    
+  }
+/* Menu Arrow */
+.menu-links ul li.menu-item-has-children::after{
+  position: relative;
+  height: 10px;
+  width: 10px;
+  content: '';
+  border-left: 1px solid #262626;
+  border-top: 1px solid #262626;
+  display: inline-block;
+  rotate: -135deg;
+  margin: 0 0 3px 3px;
+}
+.menu-links ul ul li.menu-item-has-children::after{
+  height: 7px;
+  width: 7px;
+  rotate: 130deg;
+  margin-left: -3px;
+}
+
+
+/*================================
+  --------Footer Area------------
+===============================*/
+footer{
+  background: #262626;
+  padding: 10px 0 10px 0;
+  color: #ffffff;
+}
+footer p{
+  color: #ffffff;
+  margin: auto 0;
+}
