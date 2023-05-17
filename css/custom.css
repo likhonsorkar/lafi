@@ -13,6 +13,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    position: relative;
+    transition: 1s;
   }
   
 .logo img {
@@ -101,12 +103,13 @@ nav {
       display: block;
     }
     .menu-links {
-      display: none;
       position: absolute;
-      top: 65px;
+      top: 100%;
       left: 0;
       padding: 10px;
       width: 100%;
+      z-index: 9999;
+      background: white;
     }
     .menu-links ul {
       flex-direction: column;
@@ -119,7 +122,7 @@ nav {
       font-size: 20px;
     }
     .menu-links.show {
-      display: block;
+      display: none;
     }
     /* Style the dropdown menu */
     .menu-links ul ul {
@@ -154,7 +157,7 @@ nav {
     
   }
 /* Menu Arrow */
-.menu-links ul li.menu-item-has-children::after{
+.menu-links ul li.menu-item-has-children>a::after{
   position: relative;
   height: 10px;
   width: 10px;
@@ -165,11 +168,11 @@ nav {
   rotate: -135deg;
   margin: 0 0 3px 3px;
 }
-.menu-links ul ul li.menu-item-has-children::after{
+.menu-links ul ul li.menu-item-has-children>a::after{
   height: 7px;
   width: 7px;
   rotate: 130deg;
-  margin-left: -3px;
+  margin-left: 3px;
 }
 
 

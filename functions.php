@@ -22,3 +22,24 @@ function nexus_css_js(){
   wp_enqueue_script('script', get_template_directory_uri().'/js/script.js', array(), '1.0.0', 'true' );
 }
 add_action('wp_enqueue_scripts', 'nexus_css_js');
+
+
+// Theme Custom Logo
+function nexus_custom_logo_setup() {
+	$defaults = array(
+		'height'               => 100,
+		'width'                => 400,
+		'flex-height'          => true,
+		'flex-width'           => true,
+		'header-text'          => array( 'site-title', 'site-description' ),
+		'unlink-homepage-logo' => true, 
+	);
+	add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'nexus_custom_logo_setup' );
+
+
+// Nav Menu Register
+
+// Menu Register
+register_nav_menu( 'main_menu', __('Main Menu', 'nexus') );
