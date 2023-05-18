@@ -13,7 +13,7 @@ add_image_size( 'my-custom-size', 970, 350, true );
 
 // read more
 function nexus_custom_excerpt_more( $more ) {
-  return '<br> <a href="' . get_permalink( get_the_ID() ) . '" class="readmorebtn">Read More</a>';
+  return '<br> <br><a href="' . get_permalink( get_the_ID() ) . '" class="readmorebtn">Read More</a>';
 }
 add_filter( 'excerpt_more', 'nexus_custom_excerpt_more' );
 

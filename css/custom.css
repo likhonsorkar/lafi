@@ -4,9 +4,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  transition: 0.5s ease;
 }
 img{
   max-width: 100%;
+}
+a{
+  text-decoration: none;
 }
 nav {
     display: flex;
@@ -174,7 +178,64 @@ nav {
   rotate: 130deg;
   margin-left: 3px;
 }
+/*===============================
+  ----- Blog Area --------------
+  =============================*/
+  .blog-area{
+    box-shadow: 0.5px 0.5px 5px #c2bfbf;
+    border-radius: 5px;
+  }
+  .blog-area h2.blog-title a{
+    color: #eb4d4b;
+    text-decoration: none;
+  }
+  .blog-area h2.blog-title a:hover{
+    color: #ff7979;
+  }
+  .blog-area p{
+    margin-bottom: 5px;
+  }
+  a.readmorebtn{
+    color: #ffffff;
+    background: #ff7979;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+  a.readmorebtn:hover{
+    background: #262626;
+  }
+/*==============================
+  ------ Child Sidebar --------
+  ============================*/
+.child-sidebar ul{
+  list-style: none;
+}
+.child-sidebar ul li{
+  margin: 5px;
+  margin-bottom: 10px;
+}
+.child-sidebar ul li a {
+  color: #ffffff;
+  background: #ff7979;
+  margin-right: 5px;
+  padding: 5px 10px;
 
+}
+input#s {
+  width: 100px;
+  outline: none;
+  /* border: 1px solid gray; */
+  padding: 5px 10px;
+}
+input#searchsubmit {
+  padding: 7px;
+    background: #ff7979;
+    color: #ffffff;
+    margin-left: -12px;
+    border-left: none;
+    width: 80px;
+    border: none;
+}
 
 /*================================
   --------Footer Area------------
