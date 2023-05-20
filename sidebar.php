@@ -1,4 +1,7 @@
 <div class="child-sidebar">
+            <div class="search mb-1">
+                <?php get_search_form(); ?>
+            </div>
     <h3>Recent Posts</h3>
     <div class="recent-posts">
         <?php
@@ -32,16 +35,16 @@
 
     <h3>Categories</h3>
     <ul class="category-list">
-    <?php
-    $categories = get_categories();
-    foreach ($categories as $category) {
-        $category_link = get_category_link($category->term_id);
-        $subcategory_args = array(
-            'child_of' => $category->term_id,
-            'taxonomy' => 'category'
-        );
-        $subcategories = get_categories($subcategory_args);
-    ?>
+        <?php
+        $categories = get_categories();
+        foreach ($categories as $category) {
+            $category_link = get_category_link($category->term_id);
+            $subcategory_args = array(
+                'child_of' => $category->term_id,
+                'taxonomy' => 'category'
+            );
+            $subcategories = get_categories($subcategory_args);
+        ?>
         <li class="category-list2">
             <a href="<?php echo esc_url($category_link); ?>">
                 <div class="category-icon">
@@ -63,7 +66,18 @@
                 </ul>
             <?php } ?>
         </li>
-    <?php } ?>
-</ul>             
+        <?php } ?>  
+    </ul>   
+
+    <h3>Tags</h3>
+    <div class="tag-list">
+        <?php
+        $tags = get_tags();
+        foreach ($tags as $tag) {
+            $tag_link = get_tag_link($tag->term_id);
+        ?>
+            <a href="<?php echo esc_url($tag_link); ?>" class="tagbtn"><?php echo esc_html($tag->name); ?>,</a>
+        <?php } ?>
+    </div>
 
 </div>

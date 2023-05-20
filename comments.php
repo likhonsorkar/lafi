@@ -40,7 +40,7 @@ $comment_form_args = array(
             <input type="url" class="form-control" id="urlInput" name="url" placeholder="' . __('Enter your website', 'nexus') . '">
         </div>',
     ),
-    'class_submit' => 'btn btn-primary',
+    'class_submit' => 'btn commentbtn mt-1',
     'label_submit' => __('Submit', 'nexus'),
 );
 

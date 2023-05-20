@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                <?php get_template_part('/template_part/post_page') ?>
+                <?php get_template_part('/template_part/blog_page') ?>
                 </div>
                 <div class="col-lg-4">
                     <?php get_sidebar(); ?>
