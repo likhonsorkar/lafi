@@ -11,6 +11,10 @@
   -ms-word-wrap: break-word;
   word-wrap: break-word;
 }
+:root{
+  --pm-color: #eb4d4b;
+  --sn-color : #ff7979;
+}
 img{
   max-width: 100%;
 }
@@ -18,11 +22,11 @@ a{
   text-decoration: none;
 }
 .pm-color{
-  color: #eb4d4b;
+  color: var(--pm-color);
 
 }
 .sn-color{
-  color: #ff7979;
+  color: var(--sn-color);
 }
 .wp-caption {}.wp-caption-text {}.gallery-caption {}.bypostauthor {}.alignright {}.alignleft {}.aligncenter {} .screen-reader-text{}
 nav {
@@ -126,7 +130,7 @@ nav {
       padding: 10px;
       width: 100%;
       z-index: 9999;
-      background: white;
+      background: #ffffff;
     }
     .menu-links ul {
       flex-direction: column;
@@ -197,31 +201,31 @@ nav {
   .blog-area{
   }
   .blog-area h2.blog-title a{
-    color: #eb4d4b;
     text-decoration: none;
+    color: var(--pm-color);
   }
   .blog-area h2.blog-title a:hover{
-    color: #ff7979;
+    color: var(--sn-color);
   }
   .blog-area p{
     margin-bottom: 5px;
   }
   a.readmorebtn{
     color: #ffffff;
-    background: #eb4d4b;
+    background: var(--pm-color);
     padding: 5px 10px;
     border-radius: 10px;
   }
   a.readmorebtn:hover{
-    background: #ff7979;
+    background: var(--sn-color);
   }
   /* Comment Area */
   .commentbtn{
-    background-color: #eb4d4b;
+    background-color: var(--pm-color);
     color: white;
   }
   .commentbtn:hover{
-    background-color: #ff7979d8;
+    background-color: var(--sn-color)d8;
   }
   /*===========================================
           Pagenav Area Styling
@@ -229,7 +233,7 @@ nav {
 #page_nav {
 }
 #page_nav p.pages {
-  background: #eb4d4b;
+  background: var(--pm-color);
   color: #ffffff;
   padding: 5px 10px;
 }
@@ -238,7 +242,7 @@ nav {
   padding: 0 5px;
 }
 #page_nav .page-numbers {
-  background: #eb4d4b;
+  background: var(--pm-color);
   color: #ffffff;
   display: inline-block;
   text-decoration: none;
@@ -248,14 +252,14 @@ nav {
 }
 #page_nav .page-numbers.current,
 #page_nav .page-numbers:hover {
-  background: #ff7979;
+  background: var(--sn-color);
 }
 /*==============================
   ------ Child Sidebar --------
   ============================*/
 .child-sidebar h3{
-  color: #eb4d4b;
-  border-left: 5px solid #eb4d4b;
+  color: var(--pm-color);
+  border-left: 5px solid var(--pm-color);
   padding-left: 10px;
 }
 .child-sidebar .post-details h4{
@@ -273,7 +277,7 @@ nav {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background-color: #eb4d4b;
+  background-color: var(--pm-color);
   color: #fff;
   padding: 3px;
   text-align: center;
@@ -310,28 +314,28 @@ nav {
   margin-bottom: 15px;
 }
 .search input[type="text"] {
-  border: 1px solid #eb4d4b;
+  border: 1px solid var(--pm-color);
   padding: 10px;
 }
 .search input[type="submit"] {
-  background: #eb4d4b;
-  border: 1px solid #eb4d4b;
+  background: var(--pm-color);
+  border: 1px solid var(--pm-color);
   padding: 10px;
   margin: 0;
   color: #ffffff;
 }
 .search input[type="submit"]:hover {
-  background: #ff7979;
-  border: 1px solid #ff7979;
+  background: var(--sn-color);
+  border: 1px solid var(--sn-color);
 }
 /*=============================
     404 page
 ==============================*/
 .chairsochar{
-  color: #eb4d4b;
+  color: var(--pm-color);
 }
 .chairsochar:hover{
-  color: #ff7979;
+  color: var(--sn-color);
 }
 /*================================
   --------Footer Area------------

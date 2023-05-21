@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <?php the_archive_title( '<h1 class="page-title pm-color">', '</h1>' ); ?>
+                    <?php the_archive_title( '<h3 class="page-title pm-color px-3">', '</h3>' ); ?>
                     <?php the_archive_description( '<div class="taxonomy-description sn-color">', '</div>' ); ?>
                     <?php 
                         if(have_posts()):

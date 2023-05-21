@@ -19,7 +19,7 @@
                         <h2 class="blog-title">
                             <a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
                         </h2>
-                        <p>Posted by <?php the_author(); ?> | Category: <?php the_category(', '); ?> | Date: <?php the_date(); ?></p>
+                        <p>Posted by <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php the_author(); ?></a> | Category: <?php the_category(', '); ?> | Date: <?php the_date(); ?></p>
                         <?php the_excerpt();?>
                     </div>
                     <?php
