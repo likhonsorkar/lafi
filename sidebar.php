@@ -1,4 +1,13 @@
 <div class="child-sidebar">
+<?php if ( is_active_sidebar( 'sidebar_widget' ) ) : ?>
+    <div class="widget-area">
+        <?php dynamic_sidebar( 'sidebar_widget' ); ?>
+    </div>
+<?php else: ?>
+
+
+<div class="defualt-sidebar">
+    <h3>Search</h3>
             <div class="search mb-1">
                 <?php get_search_form(); ?>
             </div>
@@ -79,5 +88,6 @@
             <a href="<?php echo esc_url($tag_link); ?>" class="tagbtn"><?php echo esc_html($tag->name); ?>,</a>
         <?php } ?>
     </div>
-
+    </div>
+    <?php endif; ?>
 </div>

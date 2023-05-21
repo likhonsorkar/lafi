@@ -13,7 +13,6 @@ if (have_comments()) {
                 'style' => 'ul',
                 'avatar_size' => 64,
                 'short_ping' => true,
-                'callback' => 'nexus_comment_callback', // Custom callback function for comment display
             )
         );
         ?>
@@ -45,3 +44,4 @@ $comment_form_args = array(
 );
 
 comment_form($comment_form_args);
+?>
